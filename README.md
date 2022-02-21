@@ -41,7 +41,7 @@ In the development mode, you will have a back-end server running with [nodemon](
 
 ### Directory Structure
 
-Source code for Back-end and Front-end will be placed at src directory. Server directory is for the API and Client is for UI source codes.
+Source code for Back-end and Front-end will be placed at src directory. `/server` directory is for the API.
 
 ### Typescript
 
