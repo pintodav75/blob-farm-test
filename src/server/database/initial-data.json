@@ -1,0 +1,20 @@
+[
+  {
+    "id": "00001",
+    "name": "Blobby",
+    "color": "#FF8C42",
+    "size": 40
+  },
+  {
+    "id": "00002",
+    "name": "Bloob",
+    "color": "#6689A1",
+    "size": 20
+  },
+  {
+    "id": "00003",
+    "name": "Blobber",
+    "color": "#A23E48",
+    "size": 30
+  }
+]

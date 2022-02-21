@@ -1,0 +1,19 @@
+.container {
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  margin: 2rem;
+}
+
+.blob {
+  box-sizing: border-box;
+  animation: morph 18s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+  z-index: 5;
+}
+
+@keyframes morph {
+  50% {
+    border-radius: 40% 70% 60% 40% / 40% 60% 30% 60%;
+  }
+}
