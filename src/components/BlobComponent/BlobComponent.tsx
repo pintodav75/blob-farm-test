@@ -4,7 +4,7 @@ import { Blob } from "../../server/models/blob";
 import tinycolor from "tinycolor2";
 import { Tooltip } from 'antd';
 
-const Header: FC<{ blob: Blob }> = ({ blob }) => {
+const BlobComponent: FC<{ blob: Blob }> = ({ blob }) => {
   function random(min = 0, max = 10) {
     return Math.floor(Math.random()*(max-min+1)+min);
   }
@@ -30,4 +30,4 @@ const Header: FC<{ blob: Blob }> = ({ blob }) => {
   );
 };
 
-export default Header;
+export default BlobComponent;
