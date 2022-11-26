@@ -1,4 +1,5 @@
 import { Blob } from "../models/blob";
+import { Error } from "../models/error"
 import blobsJson from "./initial-data.json"
 
 // This variable represent the fake database
@@ -18,20 +19,36 @@ function list(): Blob[] {
 }
 
 function get(id: string): Blob | null {
-  // TODO: Get blob by id
-  return null;
+   const res = _blobs.find((b) => b.id === id)
+   if (!res) return null
+   return res
 }
 
-function add(blob: Blob): void {
-  // TODO: Add new blob to database
+function add(blob: Blob): Error | undefined {
+  const alreadyExist = _blobs.find((b) => b.id === blob.id)
+  if (alreadyExist) {
+    return {
+      status: 400,
+      message: "a blob with this id already exists"
+    } as Error
+  }
+  
+  blob.createdAt = new Date()
+  _blobs = [..._blobs, blob]
 }
 
 function remove(id: string): void {
-  // TODO: Remove a blob from database
+  _blobs = _blobs.filter((b) => b.id !== id)
 }
 
 function update(blob: Blob): void {
-  // TODO: Update a blob
+  const modif = _blobs.find((b) => b.id === blob.id)
+  if (modif) {
+    modif.name = blob.name
+    modif.size = blob.size
+    modif.color = blob.color
+    modif.updatedAt = new Date()
+  }
 }
 
 export default { 
