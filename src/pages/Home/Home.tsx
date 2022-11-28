@@ -43,7 +43,7 @@ const Home: FC = () => {
 
   const Content = ({ blob }: any) => (
     <div>
-      <Button icon={<ZoomInOutlined />} shape='round' style={{ backgroundColor: "#D3D3D3", color: "@0a0a0a" }} onClick={() => onFeed(blob)}></Button>
+      <Button icon={<ZoomInOutlined />}  shape='round' style={{ backgroundColor: "#D3D3D3", color: "@0a0a0a" }} onClick={() => onFeed(blob)}></Button>
     </div>
   );
 
