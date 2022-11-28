@@ -18,7 +18,7 @@ const BlobComponent: FC<{ blob: Blob }> = ({ blob }) => {
       alignSelf: position,
     }}>
       <Tooltip title={blob.name}>
-        <div className={classes.blob} style={{
+        <div   className={classes.blob} style={{
           height: `${blob.size || 10}mm`,
           width: `${blob.size || 10}mm`,
           background: `linear-gradient(45deg, ${tinycolor(blob.color).lighten(25)} 0%, ${tinycolor(blob.color)} 100%)`,

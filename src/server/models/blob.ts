@@ -5,4 +5,4 @@ export interface Blob {
   color: string;
   createdAt?: Date; // Creation date
   updatedAt?: Date; // Last updated date
-}
+} 

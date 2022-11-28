@@ -8,6 +8,7 @@ import { AppRoute } from './App.models';
 import Content from './components/Content/Content';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
+import BlobDetail from './pages/BlobDetails/BlobDetails'
 
 const locales = { en };
 
@@ -21,11 +22,10 @@ const queryClient = new QueryClient({
 
 const App: FC = () => {
   const routes: AppRoute[] = [
-    // TODO: Add blob details page
-    // {
-    //   path: '/blobs/:id',
-    //   component: <></>
-    // },
+    {
+      path: '/blobs/:id',
+      component: <BlobDetail />
+    },
     {
       path: '/blobs',
       component: <Home />,
